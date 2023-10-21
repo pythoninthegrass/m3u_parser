@@ -1,9 +1,36 @@
-This is a small program to parse the information contained in a M3U playlist file and return it in the form of a list of tracks. 
+# m3u_parser
 
-Tracks are Python classes with the following fields:
-length - the length of the track in seconds
-title - the title of the track
-path - the file path to the music file (this is taken directly from the M3U and may be a relative path)
+Parses an M3U playlist file into a list of track objects.
 
-More info on the M3U file format available here:
-http://n4k3d.com/the-m3u-file-format
+Builds on the excellent work of [dvndrsn's](https://github.com/dvndrsn) [M3uParser](https://github.com/dvndrsn/M3uParser).
+
+## Setup
+* Minimum requirements
+  * [Python 3.11](https://www.python.org/downloads/)
+* Dev dependencies
+  * [editorconfig](https://editorconfig.org/)
+
+## Quickstart
+```bash
+# run against the example m3u file
+λ ./m3uparser.py examples/testing.m3u 
+Minus The Bear - Burying Luck.mp3 (0s)
+Minus The Bear - Ice Monster.mp3 (0s)
+Minus The Bear - Knights.mp3 (0s)
+Minus The Bear - White Mystery.mp3 (0s)
+Minus The Bear - Dr. l'Ling.mp3 (0s)
+Minus The Bear - Part 2.mp3 (0s)
+Minus The Bear - Throwin' Shapes.mp3 (0s)
+Minus The Bear - When We Escape.mp3 (0s)
+Minus The Bear - Double Vision Quest.mp3 (0s)
+Minus The Bear - Lotus.mp3 (0s)
+Parsed 10 tracks from examples/testing.m3u
+```
+## TODO
+* [Issues](https://github.com/pythoninthegrass/m3u_parser/issues)
+* Button up error handling for internal field separators on m3u track names
+* Tests
+* CI/CD
+
+## Further Reading
+[The M3U File Format « The Matthew Nielsen Web Experience](https://web.archive.org/web/20180809050707/http://n4k3d.com/the-m3u-file-format)
