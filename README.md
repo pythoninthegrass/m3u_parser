@@ -13,7 +13,7 @@ Builds on the excellent work of [dvndrsn's](https://github.com/dvndrsn) [M3uPars
 ## Quickstart
 ```
 # run against the example m3u file
-λ ./m3u_parser.py ../tests/fixtures/test.m3u 
+λ ./m3u_parser.py ./tests/fixtures/test.m3u
 Minus The Bear - Burying Luck.mp3 (0s)
 Minus The Bear - Ice Monster.mp3 (0s)
 Minus The Bear - Knights.mp3 (0s)
@@ -49,3 +49,9 @@ Parsed 10 tracks from ../tests/fixtures/test.m3u
 
 ## Further Reading
 [The M3U File Format « The Matthew Nielsen Web Experience](https://web.archive.org/web/20180809050707/http://n4k3d.com/the-m3u-file-format)
+
+[Repositories | Documentation | Poetry - Python dependency management and packaging made easy](https://python-poetry.org/docs/repositories/)
+
+[How to Build and Publish Python Packages With Poetry](https://www.freecodecamp.org/news/how-to-build-and-publish-python-packages-with-poetry/)
+
+[`poetry publish` raises HTTP 403 · Issue #6320 · python-poetry/poetry](https://github.com/python-poetry/poetry/issues/6320#issuecomment-1234036608)
