@@ -71,11 +71,9 @@ fi
 # publish
 case "$REPO" in
     dev)
-        echo "Publishing to TestPyPi..."
         poetry publish -u "__token__" -p "$POETRY_TEST_PYPI_TOKEN_PYPI" -r "testpypi"
         ;;
     prod)
-        echo "Publishing to PyPi..."
         poetry publish -u "__token__" -p "$POETRY_PYPI_TOKEN_PYPI"
         ;;
     "")
