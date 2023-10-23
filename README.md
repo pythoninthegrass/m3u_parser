@@ -11,9 +11,9 @@ Builds on the excellent work of [dvndrsn's](https://github.com/dvndrsn) [M3uPars
   * [editorconfig](https://editorconfig.org/)
 
 ## Quickstart
-```bash
+```
 # run against the example m3u file
-λ ./m3uparser.py examples/testing.m3u 
+λ ./m3u_parser.py ../tests/fixtures/test.m3u 
 Minus The Bear - Burying Luck.mp3 (0s)
 Minus The Bear - Ice Monster.mp3 (0s)
 Minus The Bear - Knights.mp3 (0s)
@@ -24,8 +24,23 @@ Minus The Bear - Throwin' Shapes.mp3 (0s)
 Minus The Bear - When We Escape.mp3 (0s)
 Minus The Bear - Double Vision Quest.mp3 (0s)
 Minus The Bear - Lotus.mp3 (0s)
-Parsed 10 tracks from examples/testing.m3u
+Parsed 10 tracks from ../tests/fixtures/test.m3u
 ```
+
+## Development
+* Testing
+    ```bash
+    # activate virtual environment
+    poetry shell
+    
+    # generate tests
+    cd app/
+    hypothesis write m3u_parser.parsem3u > ../tests/test_m3u_parser.py
+
+    # run specific test
+    pytest -k test_m3u_parser
+    ```
+
 ## TODO
 * [Issues](https://github.com/pythoninthegrass/m3u_parser/issues)
 * Button up error handling for internal field separators on m3u track names
