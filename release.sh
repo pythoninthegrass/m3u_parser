@@ -65,7 +65,7 @@ if find ./dist -mmin -30 | grep -q dist; then
 	echo "Skipping build"
 else
 	echo "Building..."
-	poetry build
+	poetry run build
 fi
 
 # publish
