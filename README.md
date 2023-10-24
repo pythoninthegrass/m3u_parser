@@ -24,13 +24,18 @@ m3u-parser ./tests/fixtures/test.m3u
 ```
 
 ## Development
-* Testing
-    ```
+* Setup environment
+    ```bash
+    # install dependencies
+    poetry install
+
     # activate virtual environment
     poetry shell
-
+    ```
+* Run script
+    ```
     # run against the example m3u file
-    λ app/main.py ./tests/fixtures/test.m3u
+    λ app/main.py tests/fixtures/test.m3u
     Minus The Bear - Burying Luck.mp3 (0s)
     Minus The Bear - Ice Monster.mp3 (0s)
     Minus The Bear - Knights.mp3 (0s)
@@ -42,10 +47,12 @@ m3u-parser ./tests/fixtures/test.m3u
     Minus The Bear - Double Vision Quest.mp3 (0s)
     Minus The Bear - Lotus.mp3 (0s)
     Parsed 10 tracks from ../tests/fixtures/test.m3u
-    
+    ```
+* Testing
+    ```bash
     # generate tests
     cd app/
-    hypothesis write m3u_parser.parsem3u > ../tests/test_m3u_parser.py
+    hypothesis write main.parsem3u > ../tests/test_m3u_parser.py
 
     # run specific test
     pytest -k test_m3u_parser
@@ -66,5 +73,9 @@ m3u-parser ./tests/fixtures/test.m3u
 [Repositories | Documentation | Poetry - Python dependency management and packaging made easy](https://python-poetry.org/docs/repositories/)
 
 [How to Build and Publish Python Packages With Poetry](https://www.freecodecamp.org/news/how-to-build-and-publish-python-packages-with-poetry/)
+
+[Packaging your Python Project](https://skerritt.blog/packaging-your-python-project/)
+
+[python - Use poetry to create binary distributable with pyinstaller on package? - Stack Overflow](https://stackoverflow.com/a/77181745/15454191)
 
 [`poetry publish` raises HTTP 403 · Issue #6320 · python-poetry/poetry](https://github.com/python-poetry/poetry/issues/6320#issuecomment-1234036608)
