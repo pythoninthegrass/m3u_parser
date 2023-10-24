@@ -52,10 +52,10 @@ m3u-prsr ./tests/fixtures/test.m3u
     ```bash
     # generate tests
     cd app/
-    hypothesis write main.parsem3u > ../tests/test_m3u_parser.py
+    hypothesis write main.parsem3u > ../tests/test_m3u_prsr.py
 
     # run specific test
-    pytest -k test_m3u_parser
+    pytest -k test_m3u_prsr
 
     # install from testpypi
     pip install -i https://test.pypi.org/simple/ m3u-prsr

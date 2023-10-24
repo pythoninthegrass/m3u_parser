@@ -8,9 +8,9 @@ from pathlib import Path
 # get top level directory
 tld = Path(__file__).parent.parent.resolve()
 
-# import app/m3u_parser.py
+# import app/m3u_prsr.py
 sys.path.append(str(tld / 'app'))
-import m3u_parser
+import app.main as main
 
 # suppress healthcheck warnings
 settings.register_profile("dev", suppress_health_check=list(HealthCheck))
@@ -24,4 +24,4 @@ def m3u_file():
 
 @given(verbose=st.booleans())
 def test_parsem3u(m3u_file, verbose):
-    m3u_parser.parsem3u(infile=m3u_file, verbose=verbose)
+    main.parsem3u(infile=m3u_file, verbose=verbose)
