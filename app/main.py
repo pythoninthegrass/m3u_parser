@@ -64,7 +64,7 @@ def main(filename=None, verbose=True):
         else:
             m3ufile = sys.argv[1]
     except IndexError:
-        print("Usage: m3u-prsr <m3ufile>")
+        print("Usage: m3uprsr <m3ufile>")
         sys.exit(1)
 
     return parsem3u(m3ufile, verbose=verbose)
