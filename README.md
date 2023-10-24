@@ -79,3 +79,5 @@ m3u-parser ./tests/fixtures/test.m3u
 [python - Use poetry to create binary distributable with pyinstaller on package? - Stack Overflow](https://stackoverflow.com/a/77181745/15454191)
 
 [`poetry publish` raises HTTP 403 · Issue #6320 · python-poetry/poetry](https://github.com/python-poetry/poetry/issues/6320#issuecomment-1234036608)
+
+[Tips and Tricks - Test and publish your Python packages to PyPI with poetry and GitHub Actions | TestDriven.io](https://testdriven.io/tips/810f9bb5-c9df-479d-baa4-290c7e0779f1/)
