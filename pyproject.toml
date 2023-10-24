@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "m3u-prsr"
-version = "0.1.32"
+version = "0.1.33"
 description = ""
 authors = [
     "Dave A <dave@dvndrsn.com>",
