@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "m3u-parsr"
-version = "0.1.2"
+version = "0.1.3"
 description = ""
 authors = [
     "Dave A <dave@dvndrsn.com>",
@@ -8,7 +8,7 @@ authors = [
 ]
 license = "Unlicense"
 readme = "README.md"
-packages = [{include = "m3u_parser.py"}]
+packages = [{include = "app"}]
 repository = "https://github.com/pythoninthegrass/m3u_parser/"
 
 [tool.poetry.dependencies]
@@ -30,6 +30,7 @@ ruff = "^0.1.1"
 
 [tool.poetry.scripts]
 build = "app.pyinstaller:install"
+m3u-parsr = "app.main:main"
 
 [tool.ruff]
 # Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.

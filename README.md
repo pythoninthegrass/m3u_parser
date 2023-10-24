@@ -11,27 +11,37 @@ Builds on the excellent work of [dvndrsn's](https://github.com/dvndrsn) [M3uPars
   * [editorconfig](https://editorconfig.org/)
 
 ## Quickstart
-```
-# run against the example m3u file
-λ ./m3u_parser.py ./tests/fixtures/test.m3u
-Minus The Bear - Burying Luck.mp3 (0s)
-Minus The Bear - Ice Monster.mp3 (0s)
-Minus The Bear - Knights.mp3 (0s)
-Minus The Bear - White Mystery.mp3 (0s)
-Minus The Bear - Dr. l'Ling.mp3 (0s)
-Minus The Bear - Part 2.mp3 (0s)
-Minus The Bear - Throwin' Shapes.mp3 (0s)
-Minus The Bear - When We Escape.mp3 (0s)
-Minus The Bear - Double Vision Quest.mp3 (0s)
-Minus The Bear - Lotus.mp3 (0s)
-Parsed 10 tracks from ../tests/fixtures/test.m3u
+```bash
+# setup virtual environment
+python -m venv .venv
+source .venv/bin/activate
+
+# install
+python -m pip install m3u-parsr
+
+# run
+m3u-parser ./tests/fixtures/test.m3u
 ```
 
 ## Development
 * Testing
-    ```bash
+    ```
     # activate virtual environment
     poetry shell
+
+    # run against the example m3u file
+    λ app/main.py ./tests/fixtures/test.m3u
+    Minus The Bear - Burying Luck.mp3 (0s)
+    Minus The Bear - Ice Monster.mp3 (0s)
+    Minus The Bear - Knights.mp3 (0s)
+    Minus The Bear - White Mystery.mp3 (0s)
+    Minus The Bear - Dr. l'Ling.mp3 (0s)
+    Minus The Bear - Part 2.mp3 (0s)
+    Minus The Bear - Throwin' Shapes.mp3 (0s)
+    Minus The Bear - When We Escape.mp3 (0s)
+    Minus The Bear - Double Vision Quest.mp3 (0s)
+    Minus The Bear - Lotus.mp3 (0s)
+    Parsed 10 tracks from ../tests/fixtures/test.m3u
     
     # generate tests
     cd app/
@@ -39,6 +49,9 @@ Parsed 10 tracks from ../tests/fixtures/test.m3u
 
     # run specific test
     pytest -k test_m3u_parser
+
+    # install from testpypi
+    pip install -i https://test.pypi.org/simple/ m3u-parsr
     ```
 
 ## TODO

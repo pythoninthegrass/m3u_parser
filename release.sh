@@ -12,8 +12,8 @@ USAGE
 
 NOTES
 	- Requires poetry
-	- Requires .env file in project root
 	- Requires pyproject.toml in project root
+	- Requires .env file in project root
 	- POETRY_PYPI_TOKEN_PYPI is the PyPi token (prod)
 	- POETRY_TEST_PYPI_TOKEN_PYPI is the TestPyPi token (dev)
 	- REPO can be either "dev" (TestPyPi) or "prod" (PyPi)
@@ -61,11 +61,12 @@ if [[ -z "$REPO" ]]; then
 fi
 
 # build (if older than n minutes)
-if find ./dist -mmin -30 | grep -q dist; then
+if find ./dist -mmin -30 2> /dev/null | grep -q dist; then
 	echo "Skipping build"
 else
 	echo "Building..."
-	poetry run build
+	poetry run build	# binary
+	poetry build		# source (uploads to pypi)
 fi
 
 # publish

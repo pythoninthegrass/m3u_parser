@@ -14,4 +14,5 @@ def install():
         '--onefile',
         '--nowindow',
         '--add-data=README.md:.',
+        '--workpath=/tmp',
     ])
