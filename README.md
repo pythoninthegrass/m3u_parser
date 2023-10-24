@@ -1,4 +1,4 @@
-# m3u_parser
+# m3u_prsr
 
 Parses an M3U playlist file into a list of track objects.
 
@@ -17,10 +17,10 @@ python -m venv .venv
 source .venv/bin/activate
 
 # install
-python -m pip install m3u-parsr
+python -m pip install m3u-prsr
 
 # run
-m3u-parser ./tests/fixtures/test.m3u
+m3u-prsr ./tests/fixtures/test.m3u
 ```
 
 ## Development
@@ -58,11 +58,11 @@ m3u-parser ./tests/fixtures/test.m3u
     pytest -k test_m3u_parser
 
     # install from testpypi
-    pip install -i https://test.pypi.org/simple/ m3u-parsr
+    pip install -i https://test.pypi.org/simple/ m3u-prsr
     ```
 
 ## TODO
-* [Issues](https://github.com/pythoninthegrass/m3u_parser/issues)
+* [Issues](https://github.com/pythoninthegrass/m3u_prsr/issues)
 * Button up error handling for internal field separators on m3u track names
 * Tests
 * CI/CD

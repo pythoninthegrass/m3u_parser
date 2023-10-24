@@ -10,7 +10,7 @@ path_to_main = str(here / "main.py")
 def install():
     PyInstaller.__main__.run([
         path_to_main,
-        '--name=m3u-parsr',
+        '--name=m3u-prsr',
         '--onefile',
         '--nowindow',
         '--add-data=README.md:.',
